@@ -1,0 +1,12 @@
+<!-- register.html -->
+
+{% block head %}<h3>Resume Details</h3>{% endblock %}
+{% block content %}
+
+<form method = "post" action = ".">{% csrf_token %}
+   <table border = "0">
+      {{ form.as_table }}
+   </table>
+   <button type = "submit" value = "Register">Submit</button>
+</form>
+{% endblock %}

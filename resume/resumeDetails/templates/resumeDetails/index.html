@@ -1,0 +1,45 @@
+<!--<html>
+<head>
+<title>StudentDetails</title>
+</head>
+<body>
+<h1>StudentDetails</h1>
+<!--
+{% for detail in details %}
+    <div>
+      <p>Rollno: {{ detail.rollno }}</p>
+      <p>FirstName: {{ detail.firstname }}</p>
+      <p>LastName: {{ detail.lastname }}</p>
+      <p>Email: {{ detail.email }}</p>
+      <p>PhoneNo: {{ detail.phonenumber }}</p>
+      <p>DOB: {{ detail.dob }}</p>
+      <p>Address: {{ detail.address }}</p>
+</div>
+{% endfor %}
+</body>
+</html>
+-->
+<!-- register.html -->
+<!--{% extends "base.html" %}
+{% block title %}User Registration{% endblock %}
+{% block head %}User Registration{% endblock %}
+{% block content %}
+
+<form method = "post" action = ".">{% csrf_token %}
+   <table border = "0">
+      {{ form.as_p }}
+   </table>
+   <button type = "submit" value = "Register">Register</button>
+</form>
+{% endblock %}
+-->
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h1>New post</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}
+
