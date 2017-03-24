@@ -8,7 +8,7 @@ from django.http import HttpResponse
 def register(request):
     return HttpResponse("Welcome to student info system")
 def success(request):
-    return HttpResponse("Entered Succefully")
+    return HttpResponse("Entered Successfully")
 
 def post_new(request):
     if request.method=='GET':
